@@ -1,0 +1,271 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px; /* Adjusted margin to 10px top and bottom, 5px left and right */
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: block; /* Ensures buttons stack vertically */
+    width: 100%; /* Makes buttons full width of their container */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Chat section styles */
+#contacts, #chat {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#contacts h3, #chat h3 {
+    margin-top: 0;
+}
+
+#contacts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+#contacts-list li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#contacts-list li:hover {
+    background-color: #f0f0f0;
+}
+
+#contacts-list li.active {
+    background-color: #ddd;
+}
+
+#messages {
+    border: 1px solid #ddd;
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+#message-input {
+    width: calc(100% - 80px);
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* Hide delete button by default */
+.message-item .delete-button {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Show delete button on hover */
+.message-item:hover .delete-button {
+    display: block;
+}
+
+
+#send-message {
+    width: 100px; 
+    margin-top: 10px; 
+    border-radius: 8px;
+    background-color: #28a745;
+}
+
+#send-message:hover {
+    background-color: #218838;
+}
+
+/* Media item styles */
+.media-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+}
+
+.media-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.media-item .like-button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.media-item .like-button:hover {
+    background-color: #0056b3;
+}
+
+.media-item .likes-count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.media-item .comments-button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.media-item .comments-button:hover {
+    background-color: #0056b3;
+}
+
+.media-item .comments-container {
+    display: none;
+    margin-top: 10px;
+}
+
+.media-item .comment {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.media-item .comment strong {
+    font-weight: bold;
+}
+
+.media-item .comment input {
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.media-item .comment button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.media-item .comment button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    #app {
+        padding: 10px;
+    }
+    #auth-section, #chat-section {
+        width: 100%;
+    }
+    #contacts, #chat {
+        padding: 10px;
+    }
+    #contacts-list li, #messages p {
+        font-size: 14px;
+    }
+    #message-input {
+        width: calc(100% - 80px);
+    }
+
+
+
+    #media-feed{
+        max-height: 200px;
+    }
+}

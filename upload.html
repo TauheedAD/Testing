@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Upload Image</h1>
+        <input type="file" id="imageFile" accept="image/*">
+        <button onclick="uploadImage()">Upload</button>
+        <progress value="0" max="100" id="uploadProgress"></progress>
+        <button style="width: 100px; height: 30px; background-color: rgb(49, 104, 206);" id="back">back</button>
+    </div>
+    
+    <script src="upload.js"></script>
+</body>
+</html>
